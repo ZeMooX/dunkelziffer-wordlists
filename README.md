@@ -1,3 +1,5 @@
+![](https://github.com/ZeMooX/dunkelziffer-wordlists/raw/master/banner.png)
+
 This is a wordlist collection of common web applications, created by indexing the directory and file structure of the applications and refined with paths scraped from the respective source code. Useful for discovery of even the most hard to find assets during security assessments or bug bounty hunting.
 
 ### Caveat
@@ -5,7 +7,9 @@ Due to the simple minded way of scraping the source code for possible routes whi
 
 ### Information
 **Directories:** Exclusively contains directory paths, based both on file structure and source code scraping.
+
 **Files:** Exclusively contains file paths, based both on file structure and source code scraping. This one contains a lot of nonsense.
+
 **Combined:** Both of the above combined, for maximum coverage.
  
 ### Indexed Versions
