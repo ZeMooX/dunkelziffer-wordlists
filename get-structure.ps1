@@ -34,7 +34,7 @@ Select-Object FullName |
 ForEach-Object { $_.FullName.Replace($cleanRoot, "") } | 
 Set-Content $combinedOutFile
 
-Write-Host "[+] " -ForegroundColor Magenta -NoNewline; Write-Host "Extracting paths from files.."
+Write-Host "[+] " -ForegroundColor Magenta -NoNewline; Write-Host "Extracting paths from files, this may take a while.."
 foreach ($file in $files) {
     $content = Get-Content $file.FullName
     foreach ($line in $content) {
@@ -51,7 +51,7 @@ foreach ($file in $files) {
     }
 }
 
-Write-Host "[+] " -ForegroundColor Magenta -NoNewline; Write-Host "Deduplicating and normalizing wordlists, this may take a while.."
+Write-Host "[+] " -ForegroundColor Magenta -NoNewline; Write-Host "Deduplicating and normalizing wordlists, this may take a while (again).."
 (Get-Content $dirOutFile).replace('\', '/') | Select-Object -Unique | Sort-Object | Set-Content $dirOutFile
 (Get-Content $fileOutFile).replace('\', '/') | Select-Object -Unique | Sort-Object | Set-Content $fileOutFile
 (Get-Content $combinedOutFile).replace('\', '/') | Select-Object -Unique | Sort-Object | Set-Content $combinedOutFile
